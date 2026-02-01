@@ -1,7 +1,6 @@
 extends Node
 const FIGHTER = preload("uid://bqwgjronjdtkj")
 
-
 var fighters:Array[Fighter] = []
 
 func add_fighter(dict: Dictionary[String, int], texture):

@@ -17,7 +17,8 @@ func _process(delta: float) -> void:
 		$tooltip.texture = null
 
 func play_level():
-	SceneManager.switch_scene("res://level.tscn")
+	SceneManager.switch_scene("res://chose_mask.tscn")
+	#SceneManager.switch_scene("res://level.tscn")
 
 func _on_character_fast_pressed() -> void:
 	Global.add_fighter($hbox/CharacterFast.player_stats, $hbox/CharacterFast.texture)
