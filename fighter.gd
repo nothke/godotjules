@@ -8,6 +8,7 @@ extends Node2D
 @export var range = 100
 
 @export var mask = null
+var mask_state = 0 
 
 var dmg_scene = preload("res://dmg.tscn")
 
@@ -16,6 +17,7 @@ var dmg_scene = preload("res://dmg.tscn")
 func _ready() -> void:
 	$Sprite2D.texture = texture
 	$Timer.wait_time = attack_speed / 1000
+	$Timer2.wait_time = $Timer.wait_time / 4
 	$Timer.start()
 	$Timer.one_shot = false
 	pass # Replace with function body.
@@ -51,3 +53,8 @@ func damageMe(damage: int, color) -> void:
 	
 	if health <= 0:
 		get_tree().queue_delete(self)
+
+func _on_timer_2_timeout() -> void:
+	mask_state += 1
+	texture = mask.sprites[mask_state % 4]
+	

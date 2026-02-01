@@ -20,7 +20,12 @@ position = Vector2(-4, -51.000008)
 [node name="Timer" type="Timer" parent="." unique_id=2083277918]
 autostart = true
 
+[node name="Timer2" type="Timer" parent="." unique_id=1559668886]
+wait_time = 0.25
+autostart = true
+
 [node name="Yuuuu" type="AudioStreamPlayer" parent="." unique_id=1286847540]
 stream = ExtResource("4_l3gly")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]
