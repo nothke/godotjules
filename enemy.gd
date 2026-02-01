@@ -1,8 +1,8 @@
-class_name Fighter
+class_name Enemy
 extends Node2D
 
 @export var damage = 10
-@export var attack_speed = 1000
+@export var attack_speed = 100
 @export var health = 100
 @export var max_health = 100
 @export var range = 100
@@ -13,9 +13,6 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$Sprite2D.texture = texture
-	$Timer.wait_time = attack_speed / 1000
-	$Timer.start()
-	$Timer.one_shot = false
 	pass # Replace with function body.
 
 
@@ -23,13 +20,9 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-func shoot():
-	var all_dead = true
-	for enemy in Global.enemies:
-		if enemy != null:
-			enemy.damageMe(damage)
-			all_dead = false	
-		
-
-func _on_timer_timeout() -> void:
-	shoot()
+func damageMe(damage: int) -> void:
+	health -= damage
+	print("got damage health: ", health)
+	
+	if health <= 0:
+		get_tree().queue_delete(self)

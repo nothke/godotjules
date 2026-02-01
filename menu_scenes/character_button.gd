@@ -10,11 +10,11 @@ extends TextureButton
 @export var tooltip_texture: Texture2D
 
 @export var texture: Texture2D
-@export var maskres: MaskResource
+#@export var maskres: MaskResource
 var hovered = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	texture = maskres.sprites[0]
+	#texture = maskres.sprites[]\
 	#texture_normal = texture
 	pass # Replace with function body.
 

@@ -15,3 +15,8 @@ texture = ExtResource("2_umvcx")
 position = Vector2(-4, -51.000008)
 
 [node name="Mask" parent="Marker2D" unique_id=749950183 instance=ExtResource("3_qq641")]
+
+[node name="Timer" type="Timer" parent="." unique_id=2083277918]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
