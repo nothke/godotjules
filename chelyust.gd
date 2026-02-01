@@ -25,7 +25,8 @@ func transition() -> void:
 	tween_bottom.tween_callback(switch_scene)
 	
 	$AudioStreamPlayer.play()
-
+	$Stolica2.play()
+	
 func switch_scene():
 	transition_change_scene.emit()
 	tween_top.kill();
