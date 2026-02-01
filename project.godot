@@ -18,11 +18,10 @@ config/icon="res://icon.svg"
 [autoload]
 
 SceneManager="*uid://bkrmy03uk4ak4"
-Game="*uid://kcat226fob7r"
+Global="*uid://kcat226fob7r"
 
 [display]
 
-window/size/mode=3
 window/stretch/mode="canvas_items"
 window/stretch/aspect="keep_height"
 

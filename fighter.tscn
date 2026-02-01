@@ -1,6 +1,17 @@
 [gd_scene format=3 uid="uid://bqwgjronjdtkj"]
 
 [ext_resource type="Script" uid="uid://63we5fiup0ol" path="res://fighter.gd" id="1_efvb3"]
+[ext_resource type="Texture2D" uid="uid://cn6kacrppia0b" path="res://assets/bodies/strong.png" id="2_umvcx"]
+[ext_resource type="PackedScene" uid="uid://n8y8v7culdm1" path="res://mask.tscn" id="3_qq641"]
 
 [node name="Fighter" type="Node2D" unique_id=724098259]
 script = ExtResource("1_efvb3")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=929065600]
+scale = Vector2(0.609375, 0.609375)
+texture = ExtResource("2_umvcx")
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=921874087]
+position = Vector2(-4, -51.000008)
+
+[node name="Mask" parent="Marker2D" unique_id=749950183 instance=ExtResource("3_qq641")]

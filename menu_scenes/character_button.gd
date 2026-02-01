@@ -1,18 +1,18 @@
-class_name Fighter
-extends Node2D
+extends TextureButton
 
-@export var damage = 10
-@export var attack_speed = 100
-@export var health = 100
-@export var max_health = 100
-@export var range = 100
-
-@export var mask = null
+@export var player_stats: Dictionary[String, int] = {
+	"health": 100,
+	"max_health": 100,
+	"damage": 30, 
+	"attack_speed": 1000,
+	"range": 50,
+}
 
 @export var texture: Texture2D
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	$Sprite2D.texture = texture
+	texture_normal = texture
 	pass # Replace with function body.
 
 

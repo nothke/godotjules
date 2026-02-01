@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bbvh7nr6c3ol5" path="res://menu_scenes/CharacterButton.tscn" id="1_nvctj"]
 [ext_resource type="Script" uid="uid://btv5t2x7r7wv" path="res://chose_character.gd" id="1_w2yjf"]
 [ext_resource type="Texture2D" uid="uid://bg5l00vr1ehcu" path="res://assets/bodies/smart.png" id="2_lgpmk"]
+[ext_resource type="Texture2D" uid="uid://yoib448axcdy" path="res://assets/bodies/fast.png" id="3_ltcol"]
 [ext_resource type="Texture2D" uid="uid://cn6kacrppia0b" path="res://assets/bodies/strong.png" id="3_w2yjf"]
 
 [node name="Chose character" type="Control" unique_id=2026173682]
@@ -26,10 +27,12 @@ alignment = 1
 
 [node name="CharacterFast" parent="hbox" unique_id=635891182 instance=ExtResource("1_nvctj")]
 layout_mode = 2
+texture = ExtResource("3_ltcol")
 
 [node name="CharacterSmart" parent="hbox" unique_id=865704582 instance=ExtResource("1_nvctj")]
 layout_mode = 2
 texture_normal = ExtResource("2_lgpmk")
+texture = ExtResource("2_lgpmk")
 
 [node name="Label" parent="hbox/CharacterSmart" index="0" unique_id=426885092]
 text = "Smart"
@@ -37,6 +40,7 @@ text = "Smart"
 [node name="CharacterStrong" parent="hbox" unique_id=1365028205 instance=ExtResource("1_nvctj")]
 layout_mode = 2
 texture_normal = ExtResource("3_w2yjf")
+texture = ExtResource("3_w2yjf")
 
 [node name="Label" parent="hbox/CharacterStrong" index="0" unique_id=426885092]
 text = "Strong"

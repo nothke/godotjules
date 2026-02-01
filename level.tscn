@@ -4,3 +4,34 @@
 
 [node name="Level" type="Node2D" unique_id=1847779834]
 script = ExtResource("1_u52ul")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=743235277]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -12.0
+offset_top = -242.0
+offset_right = 1436.0
+offset_bottom = 782.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+
+[node name="PlayerSpawn1" type="Marker2D" parent="." unique_id=1883250979]
+position = Vector2(88, 543)
+
+[node name="PlayerSpawn2" type="Marker2D" parent="." unique_id=954623534]
+position = Vector2(182, 452)
+
+[node name="PlayerSpawn3" type="Marker2D" parent="." unique_id=99680872]
+position = Vector2(283, 377)
+
+[node name="EnemySpawn1" type="Marker2D" parent="." unique_id=777655448]
+position = Vector2(1052, 543)
+
+[node name="EnemySpawn2" type="Marker2D" parent="." unique_id=453975864]
+position = Vector2(982, 477)
+
+[node name="EnemySpawn3" type="Marker2D" parent="." unique_id=575218926]
+position = Vector2(915, 395)

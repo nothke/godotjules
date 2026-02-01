@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://n8y8v7culdm1"]
+
+[ext_resource type="Script" uid="uid://ctr5enpki66c7" path="res://mask.gd" id="1_b0qmb"]
+[ext_resource type="Resource" uid="uid://drcbw4rtcwqot" path="res://assets/masks/yellow/yellow_mask.tres" id="2_oilhy"]
+[ext_resource type="Texture2D" uid="uid://dpf88hvebr42n" path="res://assets/masks/yellow/yellow_3.png" id="3_1rsgv"]
+
+[node name="Mask" type="Node2D" unique_id=749950183]
+script = ExtResource("1_b0qmb")
+mask = ExtResource("2_oilhy")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=100071616]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_1rsgv")

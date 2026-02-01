@@ -10,15 +10,20 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
+func play_level():
+	SceneManager.switch_scene("res://level.tscn")
 
 func _on_character_fast_pressed() -> void:
-
-	pass # Replace with function body.
-
+	Global.add_fighter($hbox/CharacterFast.player_stats, $hbox/CharacterFast.texture)
+	Global.add_fighter($hbox/CharacterFast.player_stats, $hbox/CharacterFast.texture)
+	Global.add_fighter($hbox/CharacterFast.player_stats, $hbox/CharacterFast.texture)
+	play_level()
 
 func _on_character_smart_pressed() -> void:
-	pass # Replace with function body.
+	Global.add_fighter($hbox/CharacterSmart.player_stats, $hbox/CharacterSmart.texture)
+	play_level()
 
 
 func _on_character_strong_pressed() -> void:
-	pass # Replace with function body.
+	Global.add_fighter($hbox/CharacterStrong.player_stats, $hbox/CharacterStrong.texture)
+	play_level()
