@@ -11,9 +11,14 @@ config_version=5
 [application]
 
 config/name="godotjules"
-run/main_scene="uid://hnlm6n0t55cc"
+run/main_scene="uid://bkt4g3dwgri4b"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+SceneManager="*uid://bkrmy03uk4ak4"
+Game="*uid://kcat226fob7r"
 
 [display]
 

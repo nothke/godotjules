@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://bkrmy03uk4ak4"]
+
+[ext_resource type="Script" uid="uid://br886lg10rdeg" path="res://scene_manager.gd" id="1_jo5df"]
+[ext_resource type="Script" uid="uid://dbtcg1rjt6ikh" path="res://chelyust.gd" id="2_opu64"]
+[ext_resource type="Texture2D" uid="uid://l5hwjdqimhog" path="res://assets/transition/transition_1.png" id="3_i6dy3"]
+[ext_resource type="Texture2D" uid="uid://cjlkexkuwhxf2" path="res://assets/transition/transition_2.png" id="4_8xgxq"]
+
+[node name="SceneManager" type="CanvasLayer" unique_id=1535441701]
+script = ExtResource("1_jo5df")
+
+[node name="TRANSITION" type="Node2D" parent="." unique_id=877333513]
+position = Vector2(575, 349)
+script = ExtResource("2_opu64")
+
+[node name="top" type="Sprite2D" parent="TRANSITION" unique_id=1395441661]
+position = Vector2(18, -640)
+scale = Vector2(1.0408561, 1.0408561)
+texture = ExtResource("3_i6dy3")
+
+[node name="top_target" type="Sprite2D" parent="TRANSITION" unique_id=1089667865]
+visible = false
+position = Vector2(11, 76)
+texture = ExtResource("3_i6dy3")
+
+[node name="bottom" type="Sprite2D" parent="TRANSITION" unique_id=452230046]
+position = Vector2(14, 150)
+texture = ExtResource("4_8xgxq")
+
+[node name="bottom_target" type="Sprite2D" parent="TRANSITION" unique_id=1916398982]
+visible = false
+position = Vector2(16, -148)
+texture = ExtResource("4_8xgxq")

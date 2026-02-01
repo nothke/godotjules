@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bqwgjronjdtkj"]
+
+[ext_resource type="Script" uid="uid://63we5fiup0ol" path="res://fighter.gd" id="1_efvb3"]
+
+[node name="Fighter" type="Node2D" unique_id=724098259]
+script = ExtResource("1_efvb3")

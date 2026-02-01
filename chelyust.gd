@@ -6,6 +6,8 @@ var bottom_start: Vector2
 var tween_top: Tween
 var tween_bottom: Tween
 
+signal transition_change_scene
+
 func _ready() -> void:
 	top_start = $top.position
 	bottom_start = $bottom.position
@@ -25,6 +27,7 @@ func transition() -> void:
 		
 
 func switch_scene():
+	transition_change_scene.emit()
 	tween_top.kill();
 	tween_top = get_tree().create_tween()
 	tween_top.tween_property($top, "position",  top_start, 1)\
