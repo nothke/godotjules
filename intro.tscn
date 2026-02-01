@@ -10,7 +10,10 @@
 [ext_resource type="Script" uid="uid://colgnm50kcy1d" path="res://spin.gd" id="9_0claw"]
 [ext_resource type="Script" uid="uid://dbtcg1rjt6ikh" path="res://chelyust.gd" id="10_w1kjt"]
 [ext_resource type="Texture2D" uid="uid://l5hwjdqimhog" path="res://assets/transition/transition_1.png" id="11_s13lp"]
+[ext_resource type="AudioStream" uid="uid://dxaj2g4khyr1o" path="res://assets/audio/karakondzula.wav" id="12_d0rr7"]
 [ext_resource type="Texture2D" uid="uid://cjlkexkuwhxf2" path="res://assets/transition/transition_2.png" id="12_m4rpt"]
+[ext_resource type="Texture2D" uid="uid://dwer8vuqs74ux" path="res://assets/slideshow/game_title.png" id="13_wby50"]
+[ext_resource type="Texture2D" uid="uid://nkv6p88bne08" path="res://assets/slideshow/village_night.png" id="14_xsd0a"]
 
 [node name="intro" type="Node2D" unique_id=1010223983]
 
@@ -29,6 +32,7 @@ position = Vector2(329, -239)
 scale = Vector2(0.47858572, 0.457317)
 texture = ExtResource("4_smii7")
 script = ExtResource("3_xsd0a")
+time_offset = 7.615
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1217686723]
 position = Vector2(-1, -2)
@@ -77,5 +81,20 @@ texture = ExtResource("12_m4rpt")
 visible = false
 position = Vector2(16, -148)
 texture = ExtResource("12_m4rpt")
+
+[node name="music" type="AudioStreamPlayer" parent="." unique_id=705993587]
+stream = ExtResource("12_d0rr7")
+autoplay = true
+
+[node name="VillageNight" type="Sprite2D" parent="." unique_id=1874201969]
+visible = false
+scale = Vector2(0.455, 0.455)
+texture = ExtResource("14_xsd0a")
+
+[node name="GameTitle" type="Sprite2D" parent="." unique_id=296319627]
+visible = false
+position = Vector2(0, 7.6293945e-06)
+scale = Vector2(0.45470753, 0.45470753)
+texture = ExtResource("13_wby50")
 
 [connection signal="button_down" from="play_button" to="TRANSITION" method="transition"]
