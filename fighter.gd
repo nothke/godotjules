@@ -47,5 +47,7 @@ func damageMe(damage: int, color) -> void:
 	dmg.modulate = color
 	add_child(dmg)
 	
+	$Yuuuu.play()
+	
 	if health <= 0:
 		get_tree().queue_delete(self)

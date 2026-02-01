@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cjlkexkuwhxf2" path="res://assets/transition/transition_2.png" id="4_8xgxq"]
 [ext_resource type="AudioStream" uid="uid://bgml1ea2nhqvh" path="res://assets/audio/njaaa.wav" id="5_i6dy3"]
 [ext_resource type="AudioStream" uid="uid://dxaj2g4khyr1o" path="res://assets/audio/karakondzula.wav" id="6_8xgxq"]
+[ext_resource type="AudioStream" uid="uid://dwj6esd4k03yx" path="res://assets/audio/stolica2.wav" id="6_yaxe4"]
 
 [node name="SceneManager" type="CanvasLayer" unique_id=1535441701]
 script = ExtResource("1_jo5df")
@@ -35,6 +36,9 @@ texture = ExtResource("4_8xgxq")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="TRANSITION" unique_id=1795551613]
 stream = ExtResource("5_i6dy3")
+
+[node name="Stolica2" type="AudioStreamPlayer" parent="TRANSITION" unique_id=458903069]
+stream = ExtResource("6_yaxe4")
 
 [node name="Karakondzula" type="AudioStreamPlayer" parent="." unique_id=316473527]
 stream = ExtResource("6_8xgxq")
