@@ -2,7 +2,6 @@ extends Node2D
 
 var top_start: Vector2
 var bottom_start: Vector2
-
 var tween_top: Tween
 var tween_bottom: Tween
 
@@ -24,7 +23,8 @@ func transition() -> void:
 		.set_trans(Tween.TRANS_BOUNCE)
 	
 	tween_bottom.tween_callback(switch_scene)
-		
+	
+	$AudioStreamPlayer.play()
 
 func switch_scene():
 	transition_change_scene.emit()
