@@ -1,0 +1,12 @@
+[gd_resource type="Resource" format=3 uid="uid://drcbw4rtcwqot"]
+
+[ext_resource type="Script" uid="uid://coksx6m3ptlaj" path="res://assets/masks/mask.gd" id="1_1lhiw"]
+[ext_resource type="Texture2D" uid="uid://dfph8n5nfkoyw" path="res://assets/masks/yellow/yellow_1.png" id="2_jek6b"]
+[ext_resource type="Texture2D" uid="uid://du5otefrcn3u2" path="res://assets/masks/yellow/yellow_2.png" id="3_kih26"]
+[ext_resource type="Texture2D" uid="uid://dpf88hvebr42n" path="res://assets/masks/yellow/yellow_3.png" id="4_drwyr"]
+[ext_resource type="Texture2D" uid="uid://npip3j61mgnn" path="res://assets/masks/yellow/yellow_4.png" id="5_ngp34"]
+
+[resource]
+script = ExtResource("1_1lhiw")
+color = Color(0.9, 0.73080003, 0.054, 1)
+sprites = Array[Texture2D]([ExtResource("2_jek6b"), ExtResource("3_kih26"), ExtResource("4_drwyr"), ExtResource("5_ngp34")])
