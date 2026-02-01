@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://d3dhkb01dvnts" path="res://enemy.gd" id="1_4gyqm"]
 [ext_resource type="Texture2D" uid="uid://cug3qvtw0j8rj" path="res://assets/karrakonjules/karrakonjula_1.png" id="2_4gyqm"]
-[ext_resource type="AudioStream" uid="uid://dh2ieqb11bsg1" path="res://assets/audio/hit.wav" id="3_qi2p4"]
+[ext_resource type="AudioStream" uid="uid://4afdhfca4j7u" path="res://assets/audio/hitttt.wav" id="3_qi2p4"]
 
 [node name="Enemy" type="Node2D" unique_id=1183529892]
 scale = Vector2(0.97974664, 1)

@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://63we5fiup0ol" path="res://fighter.gd" id="1_efvb3"]
 [ext_resource type="Texture2D" uid="uid://cn6kacrppia0b" path="res://assets/bodies/strong.png" id="2_umvcx"]
 [ext_resource type="PackedScene" uid="uid://n8y8v7culdm1" path="res://mask.tscn" id="3_qq641"]
-[ext_resource type="AudioStream" uid="uid://daikp3x7kgu1j" path="res://assets/audio/yuuuu.wav" id="4_l3gly"]
+[ext_resource type="AudioStream" uid="uid://11us87llf6of" path="res://assets/audio/yuuuuuuuu.wav" id="4_l3gly"]
 
 [node name="Fighter" type="Node2D" unique_id=724098259]
 script = ExtResource("1_efvb3")
