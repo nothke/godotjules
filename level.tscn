@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c4hk1vh127fe3"]
 
 [ext_resource type="Script" uid="uid://bgn3tpfy7agm1" path="res://Level.gd" id="1_u52ul"]
+[ext_resource type="Texture2D" uid="uid://danve2yw5ohv5" path="res://assets/slideshow/fight_screen.png" id="2_vonw3"]
 
 [node name="Level" type="Node2D" unique_id=1847779834]
 script = ExtResource("1_u52ul")
@@ -35,3 +36,9 @@ position = Vector2(982, 477)
 
 [node name="EnemySpawn3" type="Marker2D" parent="." unique_id=575218926]
 position = Vector2(915, 395)
+
+[node name="FightScreen" type="Sprite2D" parent="." unique_id=815473689]
+z_index = -100
+position = Vector2(577.99994, 370)
+scale = Vector2(0.81298816, 0.8129883)
+texture = ExtResource("2_vonw3")
