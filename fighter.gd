@@ -28,7 +28,7 @@ func shoot():
 	var all_dead = true
 	for enemy in Global.enemies:
 		if enemy != null:
-			enemy.damageMe(damage)
+			enemy.damageMe(damage, Color("yellow"))
 			all_dead = false	
 	
 	if all_dead:
