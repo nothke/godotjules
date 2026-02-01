@@ -12,3 +12,6 @@ func add_fighter(dict: Dictionary[String, int], texture):
 	fighter_child.range = range
 	fighter_child.texture = texture
 	fighters.append(fighter_child)
+
+func add_mask(mask_res: MaskResource):
+	pass
