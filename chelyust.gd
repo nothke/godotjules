@@ -7,8 +7,8 @@ var tween_top: Tween
 var tween_bottom: Tween
 
 func _ready() -> void:
-	top_start = $top_target.position
-	bottom_start = $bottom_target.position
+	top_start = $top.position
+	bottom_start = $bottom.position
 
 func transition() -> void:
 	tween_top = get_tree().create_tween()
