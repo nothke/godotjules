@@ -16,6 +16,8 @@ func _ready():
 	# Start with the screen clear
 	#color_rect.modulate.a = 0
 
+func start_transition():
+	transistion.transition()
 # The main function to call from anywhere
 func switch_scene(scene_path: String, params: Dictionary = {}):
 	# 1. Start Fade Out

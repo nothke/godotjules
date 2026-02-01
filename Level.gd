@@ -5,7 +5,6 @@ extends Node2D
 func _ready() -> void:
 	var spawns = [$PlayerSpawn1, $PlayerSpawn2, $PlayerSpawn3]
 
-
 	for i in Global.fighters.size():
 		var fighter = Global.fighters[i]
 		if i < spawns.size():

@@ -2,29 +2,11 @@
 
 [ext_resource type="Script" uid="uid://c1v42rq81pd8r" path="res://menu_scenes/character_button.gd" id="1_2a1rr"]
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hyt16"]
-load_path = "res://.godot/imported/fast.png-d40b0e6b3fd92b6615828e88588fd964.ctex"
-
 [node name="TextureButton" type="TextureButton" unique_id=635891182]
 size_flags_horizontal = 3
-texture_normal = SubResource("CompressedTexture2D_hyt16")
 ignore_texture_size = true
 stretch_mode = 5
 script = ExtResource("1_2a1rr")
 
-[node name="Label" type="Label" parent="." unique_id=426885092]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -59.0
-offset_top = -173.0
-offset_right = 59.000076
-offset_bottom = -150.0
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Fast"
-horizontal_alignment = 1
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

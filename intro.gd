@@ -12,4 +12,4 @@ func _process(delta: float) -> void:
 
 
 func _on_play_button_button_down() -> void:
-	SceneManager.switch_scene("res://chose_character.tscn")
+	SceneManager.switch_scene("res://slideshow.tscn")

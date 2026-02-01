@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://pyl1sin0xmm"]
+
+[ext_resource type="Script" uid="uid://f1owlbclrard" path="res://chose_mask.gd" id="1_kiijb"]
+[ext_resource type="Texture2D" uid="uid://bxhjg27nokse1" path="res://assets/choose character/charracter_select.png" id="2_ks11d"]
+[ext_resource type="PackedScene" uid="uid://bbvh7nr6c3ol5" path="res://menu_scenes/CharacterButton.tscn" id="3_q71jp"]
+[ext_resource type="Texture2D" uid="uid://dfl1vwion34nx" path="res://assets/choose tooltips/fast_tooltip.png" id="4_esqug"]
+[ext_resource type="Texture2D" uid="uid://d27fhkerwfqkv" path="res://assets/choose tooltips/smart_tooltip.png" id="5_bwg74"]
+[ext_resource type="Resource" uid="uid://drcbw4rtcwqot" path="res://assets/masks/yellow/yellow_mask.tres" id="6_ks11d"]
+[ext_resource type="Texture2D" uid="uid://npip3j61mgnn" path="res://assets/masks/yellow/yellow_4.png" id="7_ag3wk"]
+[ext_resource type="Resource" uid="uid://cbpvuo6yexd7b" path="res://assets/masks/red/red_mask.tres" id="9_q71jp"]
+
+[node name="Chose mask" type="Control" unique_id=2026173682]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kiijb")
+
+[node name="background" type="TextureRect" parent="." unique_id=1981650210]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ks11d")
+expand_mode = 2
+
+[node name="hbox" type="HBoxContainer" parent="." unique_id=1332510680]
+layout_direction = 2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 236.0
+offset_top = 244.0
+offset_right = 236.0
+offset_bottom = 244.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.62653786, 0.67757004)
+alignment = 1
+
+[node name="MaskLeft" parent="hbox" unique_id=635891182 instance=ExtResource("3_q71jp")]
+layout_mode = 2
+tooltip_texture = ExtResource("4_esqug")
+texture = ExtResource("7_ag3wk")
+maskres = ExtResource("6_ks11d")
+
+[node name="MaskRigth" parent="hbox" unique_id=865704582 instance=ExtResource("3_q71jp")]
+layout_mode = 2
+tooltip_texture = ExtResource("5_bwg74")
+texture = ExtResource("7_ag3wk")
+maskres = ExtResource("9_q71jp")
+
+[node name="tooltip" type="TextureRect" parent="." unique_id=1361857488]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.77647567
+anchor_right = 0.77647567
+offset_left = -447.5
+offset_right = 447.5
+offset_bottom = 411.0
+grow_horizontal = 2
+scale = Vector2(0.34321827, 0.34321827)
+
+[connection signal="mouse_entered" from="hbox/MaskLeft" to="." method="_on_character_fast_mouse_entered"]
+[connection signal="pressed" from="hbox/MaskLeft" to="." method="_on_character_fast_pressed"]
+[connection signal="pressed" from="hbox/MaskRigth" to="." method="_on_character_smart_pressed"]

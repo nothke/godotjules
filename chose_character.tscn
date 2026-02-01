@@ -3,8 +3,12 @@
 [ext_resource type="PackedScene" uid="uid://bbvh7nr6c3ol5" path="res://menu_scenes/CharacterButton.tscn" id="1_nvctj"]
 [ext_resource type="Script" uid="uid://btv5t2x7r7wv" path="res://chose_character.gd" id="1_w2yjf"]
 [ext_resource type="Texture2D" uid="uid://bg5l00vr1ehcu" path="res://assets/bodies/smart.png" id="2_lgpmk"]
+[ext_resource type="Texture2D" uid="uid://bxhjg27nokse1" path="res://assets/choose character/charracter_select.png" id="2_ltcol"]
 [ext_resource type="Texture2D" uid="uid://yoib448axcdy" path="res://assets/bodies/fast.png" id="3_ltcol"]
 [ext_resource type="Texture2D" uid="uid://cn6kacrppia0b" path="res://assets/bodies/strong.png" id="3_w2yjf"]
+[ext_resource type="Texture2D" uid="uid://d27fhkerwfqkv" path="res://assets/choose tooltips/smart_tooltip.png" id="4_2o6we"]
+[ext_resource type="Texture2D" uid="uid://dfl1vwion34nx" path="res://assets/choose tooltips/fast_tooltip.png" id="4_ltcol"]
+[ext_resource type="Texture2D" uid="uid://x7eucav83ngf" path="res://assets/choose tooltips/strong_tooltip.png" id="6_my2ab"]
 
 [node name="Chose character" type="Control" unique_id=2026173682]
 layout_mode = 3
@@ -15,39 +19,58 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_w2yjf")
 
-[node name="hbox" type="HBoxContainer" parent="." unique_id=1332510680]
-layout_direction = 2
+[node name="background" type="TextureRect" parent="." unique_id=1981650210]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = ExtResource("2_ltcol")
+expand_mode = 2
+
+[node name="hbox" type="HBoxContainer" parent="." unique_id=1332510680]
+layout_direction = 2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 236.0
+offset_top = 244.0
+offset_right = 236.0
+offset_bottom = 244.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.62653786, 0.67757004)
 alignment = 1
 
 [node name="CharacterFast" parent="hbox" unique_id=635891182 instance=ExtResource("1_nvctj")]
 layout_mode = 2
+tooltip_texture = ExtResource("4_ltcol")
 texture = ExtResource("3_ltcol")
 
 [node name="CharacterSmart" parent="hbox" unique_id=865704582 instance=ExtResource("1_nvctj")]
 layout_mode = 2
-texture_normal = ExtResource("2_lgpmk")
+tooltip_texture = ExtResource("4_2o6we")
 texture = ExtResource("2_lgpmk")
-
-[node name="Label" parent="hbox/CharacterSmart" index="0" unique_id=426885092]
-text = "Smart"
 
 [node name="CharacterStrong" parent="hbox" unique_id=1365028205 instance=ExtResource("1_nvctj")]
 layout_mode = 2
-texture_normal = ExtResource("3_w2yjf")
+tooltip_texture = ExtResource("6_my2ab")
 texture = ExtResource("3_w2yjf")
 
-[node name="Label" parent="hbox/CharacterStrong" index="0" unique_id=426885092]
-text = "Strong"
+[node name="tooltip" type="TextureRect" parent="." unique_id=1361857488]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.77647567
+anchor_right = 0.77647567
+offset_left = -447.5
+offset_right = 447.5
+offset_bottom = 411.0
+grow_horizontal = 2
+scale = Vector2(0.34321827, 0.34321827)
 
+[connection signal="mouse_entered" from="hbox/CharacterFast" to="." method="_on_character_fast_mouse_entered"]
 [connection signal="pressed" from="hbox/CharacterFast" to="." method="_on_character_fast_pressed"]
 [connection signal="pressed" from="hbox/CharacterSmart" to="." method="_on_character_smart_pressed"]
 [connection signal="pressed" from="hbox/CharacterStrong" to="." method="_on_character_strong_pressed"]
-
-[editable path="hbox/CharacterSmart"]
-[editable path="hbox/CharacterStrong"]

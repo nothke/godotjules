@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://be1ugp41c2dn1"]
+
+[ext_resource type="Texture2D" uid="uid://dfl1vwion34nx" path="res://assets/choose tooltips/fast_tooltip.png" id="1_gwequ"]
+
+[node name="Tooltip" type="Control" unique_id=1360210505]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=458035339]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(6.303503, 1.8435688)
+texture = ExtResource("1_gwequ")
+expand_mode = 2
