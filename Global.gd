@@ -19,7 +19,7 @@ func add_fighter(dict: Dictionary[String, int], texture, enemy_texture):
 	var fighter = fighters[0]
 	
 	var enemy_child = ENEMY.instantiate() 
-	enemy_child.damage = fighter.damage - 10
+	enemy_child.damage = fighter.damage + 20
 	enemy_child.attack_speed = fighter.attack_speed
 	enemy_child.health =fighter.health
 	enemy_child.max_health = fighter.max_health

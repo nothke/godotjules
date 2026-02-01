@@ -42,11 +42,10 @@ func _on_timer_timeout() -> void:
 	
 func damageMe(damage: int, color) -> void:
 	health -= damage
-	print("got damage health: ", health)
+	print("Fighter damage health: ", health)
 	var dmg = dmg_scene.instantiate()
 	dmg.modulate = color
 	add_child(dmg)
-	
 	
 	if health <= 0:
 		get_tree().queue_delete(self)
