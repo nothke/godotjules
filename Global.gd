@@ -2,6 +2,12 @@ extends Node
 const FIGHTER = preload("uid://bqwgjronjdtkj")
 const ENEMY = preload("uid://b4awr2nj23kx7")
 
+@onready var enemy_textures: Array[Texture2D] = [
+	preload("res://assets/karrakonjules/karrakonjula_1.png"),
+	preload("res://assets/karrakonjules/karrakonjula_2.png"),
+	preload("res://assets/karrakonjules/karrakonjula_3.png")
+]
+
 var fighters:Array[Fighter] = []
 
 var enemies:Array[Enemy] = []
@@ -24,7 +30,7 @@ func add_fighter(dict: Dictionary[String, int], texture, enemy_texture):
 	enemy_child.health =fighter.health
 	enemy_child.max_health = fighter.max_health
 	enemy_child.range = range        
-	enemy_child.texture = fighter.texture
+	enemy_child.texture = enemy_textures.pick_random()
 	enemies.append(enemy_child) 
 
 func add_mask(mask_res: MaskResource):
