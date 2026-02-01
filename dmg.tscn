@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://ctdkq8ed25mij"]
+
+[ext_resource type="Texture2D" uid="uid://ye630wwc7w5y" path="res://assets/dmg_effect/dmg_1.png" id="1_uaidc"]
+[ext_resource type="Texture2D" uid="uid://ctytbno2l1w7v" path="res://assets/dmg_effect/dmg_2.png" id="2_hijnp"]
+[ext_resource type="Texture2D" uid="uid://cwy3ovf3gxe6q" path="res://assets/dmg_effect/dmg_3.png" id="3_dfpsu"]
+[ext_resource type="Texture2D" uid="uid://buieccu5ejhbv" path="res://assets/dmg_effect/dmg_4.png" id="4_72oet"]
+[ext_resource type="Texture2D" uid="uid://cnikw7cllak5h" path="res://assets/dmg_effect/dmg_5.png" id="5_qg51p"]
+[ext_resource type="Texture2D" uid="uid://bpbado2nhxvyd" path="res://assets/dmg_effect/dmg_6.png" id="6_dijpi"]
+[ext_resource type="Texture2D" uid="uid://bhhvn3c2y7l7r" path="res://assets/dmg_effect/dmg_7.png" id="7_5makw"]
+[ext_resource type="Texture2D" uid="uid://dj0731vbaqf21" path="res://assets/dmg_effect/dmg_8.png" id="8_wfwa5"]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_8gcy2"]
+frames = 8
+speed_scale = 10.0
+frame_0/texture = ExtResource("1_uaidc")
+frame_1/texture = ExtResource("2_hijnp")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("3_dfpsu")
+frame_2/duration = 1.0
+frame_3/texture = ExtResource("4_72oet")
+frame_3/duration = 1.0
+frame_4/texture = ExtResource("5_qg51p")
+frame_4/duration = 1.0
+frame_5/texture = ExtResource("6_dijpi")
+frame_5/duration = 1.0
+frame_6/texture = ExtResource("7_5makw")
+frame_6/duration = 1.0
+frame_7/texture = ExtResource("8_wfwa5")
+frame_7/duration = 1.0
+
+[node name="dmg" type="Sprite2D" unique_id=912126335]
+scale = Vector2(0.14355469, 0.14355469)
+texture = SubResource("AnimatedTexture_8gcy2")
