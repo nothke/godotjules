@@ -15,7 +15,18 @@ func add_fighter(dict: Dictionary[String, int], texture, enemy_texture):
 	fighter_child.range = range
 	fighter_child.texture = texture
 	fighters.append(fighter_child)
+	
+	var fighter = fighters[0]
+	
+	var enemy_child = ENEMY.instantiate() 
+	enemy_child.damage = fighter.damage - 10
+	enemy_child.attack_speed = fighter.attack_speed
+	enemy_child.health =fighter.health
+	enemy_child.max_health = fighter.max_health
+	enemy_child.range = range        
+	enemy_child.texture = fighter.texture
+	enemies.append(enemy_child) 
 
 func add_mask(mask_res: MaskResource):
-	# OVDE TREBA DA SE STAVI MASKA
+	# OVDE TREBA DA SE STAVI MASKA4
 	pass
