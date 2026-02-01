@@ -9,6 +9,8 @@ extends Node2D
 
 @export var mask = null
 
+var dmg_scene = preload("res://dmg.tscn")
+
 @export var texture: Texture2D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -37,3 +39,14 @@ func shoot():
 
 func _on_timer_timeout() -> void:
 	shoot()
+	
+func damageMe(damage: int, color) -> void:
+	health -= damage
+	print("got damage health: ", health)
+	var dmg = dmg_scene.instantiate()
+	dmg.modulate = color
+	add_child(dmg)
+	
+	
+	if health <= 0:
+		get_tree().queue_delete(self)

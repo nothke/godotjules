@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://rq072cqdf57q"]
+
+[ext_resource type="Texture2D" uid="uid://btytlu1suagip" path="res://assets/slideshow/lose_screen.png" id="1_h3ym8"]
+[ext_resource type="Script" uid="uid://bicjl85jv6stt" path="res://lose_screen.gd" id="2_h3ym8"]
+
+[node name="Node2D" type="TextureRect" unique_id=1170670522]
+offset_right = 1156.0
+offset_bottom = 654.0
+texture = ExtResource("1_h3ym8")
+expand_mode = 2
+script = ExtResource("2_h3ym8")

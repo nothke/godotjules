@@ -32,3 +32,17 @@ func damageMe(damage: int, color) -> void:
 	
 	if health <= 0:
 		get_tree().queue_delete(self)
+
+func shoot():
+	var all_dead = true
+	for fighter in Global.fighters:
+		if fighter != null:
+			fighter.damageMe(damage, Color("red"))
+			all_dead = false	
+	
+	if all_dead:
+		SceneManager.switch_scene("res://win_screen.tscn")
+
+
+func _on_timer_timeout() -> void:
+	shoot()

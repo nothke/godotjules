@@ -10,3 +10,8 @@ script = ExtResource("1_4gyqm")
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=135139616]
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("2_4gyqm")
+
+[node name="Timer" type="Timer" parent="." unique_id=1296328087]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
