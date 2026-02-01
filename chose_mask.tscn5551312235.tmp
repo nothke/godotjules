@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://pyl1sin0xmm"]
+
+[ext_resource type="Texture2D" uid="uid://c4ku166bcc5vk" path="res://assets/shop/shop.jpg" id="2_kiijb"]
+[ext_resource type="PackedScene" uid="uid://bbvh7nr6c3ol5" path="res://menu_scenes/CharacterButton.tscn" id="3_q71jp"]
+[ext_resource type="Script" uid="uid://bbreweet10o3l" path="res://mask_button.gd" id="4_ag3wk"]
+[ext_resource type="Resource" uid="uid://bmxyngj7ovn70" path="res://masks.res" id="6_kiijb"]
+[ext_resource type="Resource" uid="uid://drcbw4rtcwqot" path="res://assets/masks/yellow/yellow_mask.tres" id="6_ks11d"]
+
+[node name="Chose mask" type="Control" unique_id=2026173682]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="background" type="TextureRect" parent="." unique_id=1981650210]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_kiijb")
+expand_mode = 2
+
+[node name="hbox" type="HBoxContainer" parent="." unique_id=1332510680]
+layout_direction = 2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 123.77164
+offset_top = 244.0
+offset_right = 482.02087
+offset_bottom = 244.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.62653786, 0.67757004)
+alignment = 1
+
+[node name="MaskLeft" parent="hbox" unique_id=635891182 instance=ExtResource("3_q71jp")]
+layout_mode = 2
+script = ExtResource("4_ag3wk")
+mask_res = ExtResource("6_ks11d")
+mask_db = ExtResource("6_kiijb")
+
+[node name="MaskRigth" parent="hbox" unique_id=865704582 instance=ExtResource("3_q71jp")]
+layout_mode = 2
+script = ExtResource("4_ag3wk")
+mask_res = ExtResource("6_ks11d")
+mask_db = ExtResource("6_kiijb")
+
+[node name="tooltip" type="TextureRect" parent="." unique_id=1361857488]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.77647567
+anchor_right = 0.77647567
+offset_left = -447.5
+offset_right = 447.5
+offset_bottom = 411.0
+grow_horizontal = 2
+scale = Vector2(0.34321827, 0.34321827)
+
+[connection signal="button_down" from="hbox/MaskLeft" to="hbox/MaskLeft" method="_on_button_down"]
+[connection signal="mouse_entered" from="hbox/MaskLeft" to="." method="_on_character_fast_mouse_entered"]
+[connection signal="button_down" from="hbox/MaskRigth" to="hbox/MaskRigth" method="_on_button_down"]
