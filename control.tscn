@@ -1,7 +1,5 @@
 [gd_scene format=3 uid="uid://hnlm6n0t55cc"]
 
-[ext_resource type="Texture2D" uid="uid://qpprlmpu18g0" path="res://assets/main_menu/main_menu_example.png" id="1_0fbet"]
-
 [node name="Control" type="Control" unique_id=638673191]
 layout_mode = 3
 anchors_preset = 15
@@ -9,7 +7,3 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="MainMenuExample" type="Sprite2D" parent="." unique_id=1130679827]
-position = Vector2(710, 354)
-texture = ExtResource("1_0fbet")

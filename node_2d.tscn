@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://cx472vbe0namh"]
+
+[ext_resource type="Texture2D" uid="uid://c5atf7hx26d65" path="res://assets/main_menu/main_menu_village.png" id="1_epypp"]
+[ext_resource type="Texture2D" uid="uid://c1conxdqejsxl" path="res://assets/main_menu/cloud_1.png" id="2_0hol4"]
+[ext_resource type="Script" uid="uid://ccp55ar7ijufl" path="res://cloud_move.gd" id="3_d21ai"]
+[ext_resource type="Texture2D" uid="uid://c3epmn56xb38l" path="res://assets/main_menu/cloud_2.png" id="3_q6r6c"]
+[ext_resource type="Texture2D" uid="uid://be1su7aue8mho" path="res://assets/main_menu/play_button.png" id="4_0hol4"]
+[ext_resource type="Texture2D" uid="uid://bkgn8x3bi4av" path="res://assets/sun_rays.png" id="5_q6r6c"]
+[ext_resource type="Script" uid="uid://colgnm50kcy1d" path="res://spin.gd" id="6_kdubu"]
+
+[node name="intro" type="Node2D" unique_id=1010223983]
+
+[node name="MainMenuVillage" type="Sprite2D" parent="." unique_id=1676604581]
+scale = Vector2(0.45781255, 0.45781252)
+texture = ExtResource("1_epypp")
+
+[node name="Cloud1" type="Sprite2D" parent="." unique_id=1208437663]
+position = Vector2(-391, -215)
+scale = Vector2(0.48039222, 0.48039222)
+texture = ExtResource("2_0hol4")
+script = ExtResource("3_d21ai")
+
+[node name="Cloud2" type="Sprite2D" parent="." unique_id=355717796]
+position = Vector2(329, -239)
+scale = Vector2(0.47858572, 0.457317)
+texture = ExtResource("3_q6r6c")
+script = ExtResource("3_d21ai")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1217686723]
+position = Vector2(-1, -2)
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=2024843370]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -230.0
+offset_top = -421.99997
+offset_right = 230.0
+offset_bottom = 38.00003
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.47, 0.47)
+pivot_offset = Vector2(230, 230)
+texture_normal = ExtResource("4_0hol4")
+
+[node name="SunRays" type="Sprite2D" parent="." unique_id=1667602901]
+position = Vector2(0, -188)
+scale = Vector2(0.6501794, 0.6501794)
+texture = ExtResource("5_q6r6c")
+offset = Vector2(8.135, 0)
+script = ExtResource("6_kdubu")
