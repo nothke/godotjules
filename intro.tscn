@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://c3epmn56xb38l" path="res://assets/main_menu/cloud_2.png" id="4_smii7"]
 [ext_resource type="Texture2D" uid="uid://be1su7aue8mho" path="res://assets/main_menu/play_button.png" id="5_dmx7j"]
 [ext_resource type="Texture2D" uid="uid://66t8fwqqbul6" path="res://assets/main_menu/play_button_hover.png" id="6_pwhnr"]
-[ext_resource type="Script" uid="uid://63p33k7mscoi" path="res://play_button.gd" id="7_h770g"]
 [ext_resource type="Texture2D" uid="uid://1btw61id0ve1" path="res://assets/main_menu/Sun Rays.png" id="8_qn042"]
 [ext_resource type="Script" uid="uid://colgnm50kcy1d" path="res://spin.gd" id="9_0claw"]
 [ext_resource type="Script" uid="uid://dbtcg1rjt6ikh" path="res://chelyust.gd" id="10_w1kjt"]
@@ -50,7 +49,6 @@ scale = Vector2(0.42283106, 0.42283106)
 pivot_offset = Vector2(230, 230)
 texture_normal = ExtResource("5_dmx7j")
 texture_hover = ExtResource("6_pwhnr")
-script = ExtResource("7_h770g")
 
 [node name="SunRays" type="Sprite2D" parent="." unique_id=1667602901]
 position = Vector2(0, -181.99998)
