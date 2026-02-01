@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://b4awr2nj23kx7"]
 
-[ext_resource type="Script" path="res://Enemy.gd" id="1_7k104"]
+[ext_resource type="Script" uid="uid://d3dhkb01dvnts" path="res://enemy.gd" id="1_4gyqm"]
 [ext_resource type="Texture2D" uid="uid://cug3qvtw0j8rj" path="res://assets/karrakonjules/karrakonjula_1.png" id="2_4gyqm"]
 
 [node name="Enemy" type="Node2D" unique_id=1183529892]
 scale = Vector2(0.97974664, 1)
-script = ExtResource("1_7k104")
+script = ExtResource("1_4gyqm")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=135139616]
 scale = Vector2(0.8, 0.8)

@@ -21,16 +21,16 @@ func play_level():
 	#SceneManager.switch_scene("res://level.tscn")
 
 func _on_character_fast_pressed() -> void:
-	Global.add_fighter($hbox/CharacterFast.player_stats, $hbox/CharacterFast.texture)
+	Global.add_fighter($hbox/CharacterFast.player_stats, $hbox/CharacterFast.texture,$hbox/CharacterFast.texture)
 	play_level()
 
 func _on_character_smart_pressed() -> void:
-	Global.add_fighter($hbox/CharacterSmart.player_stats, $hbox/CharacterSmart.texture)
+	Global.add_fighter($hbox/CharacterSmart.player_stats, $hbox/CharacterSmart.texture,$hbox/CharacterFast.texture)
 	play_level()
 
 
 func _on_character_strong_pressed() -> void:
-	Global.add_fighter($hbox/CharacterStrong.player_stats, $hbox/CharacterStrong.texture)
+	Global.add_fighter($hbox/CharacterStrong.player_stats, $hbox/CharacterStrong.texture,$hbox/CharacterFast.texture)
 	play_level()
 
 

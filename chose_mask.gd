@@ -1,4 +1,4 @@
-extends TextureButton
+extends Control
 
 @export var mask: MaskResource
 
