@@ -1,18 +1,21 @@
 [gd_scene format=3 uid="uid://cx472vbe0namh"]
 
-[ext_resource type="Texture2D" uid="uid://c5atf7hx26d65" path="res://assets/main_menu/main_menu_village.png" id="1_epypp"]
+[ext_resource type="Texture2D" uid="uid://csom6udb6pe5n" path="res://assets/main_menu/main_menu_village_2.png" id="1_d21ai"]
 [ext_resource type="Texture2D" uid="uid://c1conxdqejsxl" path="res://assets/main_menu/cloud_1.png" id="2_0hol4"]
 [ext_resource type="Script" uid="uid://ccp55ar7ijufl" path="res://cloud_move.gd" id="3_d21ai"]
 [ext_resource type="Texture2D" uid="uid://c3epmn56xb38l" path="res://assets/main_menu/cloud_2.png" id="3_q6r6c"]
 [ext_resource type="Texture2D" uid="uid://be1su7aue8mho" path="res://assets/main_menu/play_button.png" id="4_0hol4"]
-[ext_resource type="Texture2D" uid="uid://bkgn8x3bi4av" path="res://assets/sun_rays.png" id="5_q6r6c"]
 [ext_resource type="Script" uid="uid://colgnm50kcy1d" path="res://spin.gd" id="6_kdubu"]
+[ext_resource type="Texture2D" uid="uid://1btw61id0ve1" path="res://assets/main_menu/Sun Rays.png" id="6_rj586"]
+[ext_resource type="Texture2D" uid="uid://l5hwjdqimhog" path="res://assets/transition/transition_1.png" id="8_4d7sh"]
+[ext_resource type="Script" uid="uid://dbtcg1rjt6ikh" path="res://chelyust.gd" id="8_ir8iy"]
+[ext_resource type="Texture2D" uid="uid://cjlkexkuwhxf2" path="res://assets/transition/transition_2.png" id="9_ir8iy"]
 
 [node name="intro" type="Node2D" unique_id=1010223983]
 
 [node name="MainMenuVillage" type="Sprite2D" parent="." unique_id=1676604581]
 scale = Vector2(0.45781255, 0.45781252)
-texture = ExtResource("1_epypp")
+texture = ExtResource("1_d21ai")
 
 [node name="Cloud1" type="Sprite2D" parent="." unique_id=1208437663]
 position = Vector2(-391, -215)
@@ -36,18 +39,39 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -230.0
-offset_top = -421.99997
+offset_top = -413.0
 offset_right = 230.0
-offset_bottom = 38.00003
+offset_bottom = 47.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(0.47, 0.47)
+scale = Vector2(0.42283106, 0.42283106)
 pivot_offset = Vector2(230, 230)
 texture_normal = ExtResource("4_0hol4")
+texture_hover = ExtResource("4_0hol4")
 
 [node name="SunRays" type="Sprite2D" parent="." unique_id=1667602901]
-position = Vector2(0, -188)
-scale = Vector2(0.6501794, 0.6501794)
-texture = ExtResource("5_q6r6c")
-offset = Vector2(8.135, 0)
+position = Vector2(0, -181.99998)
+scale = Vector2(0.42817986, 0.42817986)
+texture = ExtResource("6_rj586")
 script = ExtResource("6_kdubu")
+
+[node name="TRANSITION" type="Node2D" parent="." unique_id=1650612500]
+script = ExtResource("8_ir8iy")
+
+[node name="top" type="Sprite2D" parent="TRANSITION" unique_id=1366663607]
+position = Vector2(0, -640)
+texture = ExtResource("8_4d7sh")
+
+[node name="top_target" type="Sprite2D" parent="TRANSITION" unique_id=1747887764]
+visible = false
+position = Vector2(0, 76)
+texture = ExtResource("8_4d7sh")
+
+[node name="bottom" type="Sprite2D" parent="TRANSITION" unique_id=5419891]
+position = Vector2(0, 150)
+texture = ExtResource("9_ir8iy")
+
+[node name="bottom_target" type="Sprite2D" parent="TRANSITION" unique_id=757482477]
+visible = false
+position = Vector2(0, -148)
+texture = ExtResource("9_ir8iy")

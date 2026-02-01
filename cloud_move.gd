@@ -1,5 +1,7 @@
 extends Node2D
 
+@export var time_offset: float = 0
+
 var original_pos: Vector2
 var accum: float
 

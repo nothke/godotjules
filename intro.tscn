@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://cxp8f5aw02sk6"]
+
+[ext_resource type="Texture2D" uid="uid://csom6udb6pe5n" path="res://assets/main_menu/main_menu_village_2.png" id="1_d0rr7"]
+[ext_resource type="Texture2D" uid="uid://c1conxdqejsxl" path="res://assets/main_menu/cloud_1.png" id="2_wby50"]
+[ext_resource type="Script" uid="uid://ccp55ar7ijufl" path="res://cloud_move.gd" id="3_xsd0a"]
+[ext_resource type="Texture2D" uid="uid://c3epmn56xb38l" path="res://assets/main_menu/cloud_2.png" id="4_smii7"]
+[ext_resource type="Texture2D" uid="uid://be1su7aue8mho" path="res://assets/main_menu/play_button.png" id="5_dmx7j"]
+[ext_resource type="Texture2D" uid="uid://66t8fwqqbul6" path="res://assets/main_menu/play_button_hover.png" id="6_pwhnr"]
+[ext_resource type="Script" uid="uid://63p33k7mscoi" path="res://play_button.gd" id="7_h770g"]
+[ext_resource type="Texture2D" uid="uid://1btw61id0ve1" path="res://assets/main_menu/Sun Rays.png" id="8_qn042"]
+[ext_resource type="Script" uid="uid://colgnm50kcy1d" path="res://spin.gd" id="9_0claw"]
+[ext_resource type="Script" uid="uid://dbtcg1rjt6ikh" path="res://chelyust.gd" id="10_w1kjt"]
+[ext_resource type="Texture2D" uid="uid://l5hwjdqimhog" path="res://assets/transition/transition_1.png" id="11_s13lp"]
+[ext_resource type="Texture2D" uid="uid://cjlkexkuwhxf2" path="res://assets/transition/transition_2.png" id="12_m4rpt"]
+
+[node name="intro" type="Node2D" unique_id=1010223983]
+
+[node name="MainMenuVillage" type="Sprite2D" parent="." unique_id=1676604581]
+scale = Vector2(0.45781255, 0.45781252)
+texture = ExtResource("1_d0rr7")
+
+[node name="Cloud1" type="Sprite2D" parent="." unique_id=1208437663]
+position = Vector2(-391, -215)
+scale = Vector2(0.48039222, 0.48039222)
+texture = ExtResource("2_wby50")
+script = ExtResource("3_xsd0a")
+
+[node name="Cloud2" type="Sprite2D" parent="." unique_id=355717796]
+position = Vector2(329, -239)
+scale = Vector2(0.47858572, 0.457317)
+texture = ExtResource("4_smii7")
+script = ExtResource("3_xsd0a")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1217686723]
+position = Vector2(-1, -2)
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=2024843370]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -230.0
+offset_top = -413.0
+offset_right = 230.0
+offset_bottom = 47.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.42283106, 0.42283106)
+pivot_offset = Vector2(230, 230)
+texture_normal = ExtResource("5_dmx7j")
+texture_hover = ExtResource("6_pwhnr")
+script = ExtResource("7_h770g")
+
+[node name="SunRays" type="Sprite2D" parent="." unique_id=1667602901]
+position = Vector2(0, -181.99998)
+scale = Vector2(0.42817986, 0.42817986)
+texture = ExtResource("8_qn042")
+script = ExtResource("9_0claw")
+
+[node name="TRANSITION" type="Node2D" parent="." unique_id=1650612500]
+script = ExtResource("10_w1kjt")
+
+[node name="top" type="Sprite2D" parent="TRANSITION" unique_id=1366663607]
+position = Vector2(18, -640)
+scale = Vector2(1.0408561, 1.0408561)
+texture = ExtResource("11_s13lp")
+
+[node name="top_target" type="Sprite2D" parent="TRANSITION" unique_id=1747887764]
+visible = false
+position = Vector2(11, 76)
+texture = ExtResource("11_s13lp")
+
+[node name="bottom" type="Sprite2D" parent="TRANSITION" unique_id=5419891]
+position = Vector2(14, 150)
+texture = ExtResource("12_m4rpt")
+
+[node name="bottom_target" type="Sprite2D" parent="TRANSITION" unique_id=757482477]
+visible = false
+position = Vector2(16, -148)
+texture = ExtResource("12_m4rpt")
+
+[connection signal="button_down" from="TextureButton" to="TRANSITION" method="transition"]
