@@ -34,7 +34,7 @@ script = ExtResource("3_xsd0a")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1217686723]
 position = Vector2(-1, -2)
 
-[node name="TextureButton" type="TextureButton" parent="." unique_id=2024843370]
+[node name="play_button" type="TextureButton" parent="." unique_id=2024843370]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -80,4 +80,4 @@ visible = false
 position = Vector2(16, -148)
 texture = ExtResource("12_m4rpt")
 
-[connection signal="button_down" from="TextureButton" to="TRANSITION" method="transition"]
+[connection signal="button_down" from="play_button" to="TRANSITION" method="transition"]
