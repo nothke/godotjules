@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://ckgxpfvbyckwb"]
+
+[ext_resource type="Texture2D" uid="uid://qqkaqn5ub4so" path="res://assets/slideshow/win_screen.png" id="1_l2arl"]
+[ext_resource type="Script" uid="uid://cl0vvpcnmqhnn" path="res://win_screen.gd" id="2_wmwda"]
+
+[node name="Node2D" type="TextureRect" unique_id=1170670522]
+offset_right = 1156.0
+offset_bottom = 654.0
+texture = ExtResource("1_l2arl")
+expand_mode = 2
+script = ExtResource("2_wmwda")

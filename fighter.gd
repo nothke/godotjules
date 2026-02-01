@@ -22,6 +22,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+		
 
 func shoot():
 	var all_dead = true
@@ -29,6 +30,9 @@ func shoot():
 		if enemy != null:
 			enemy.damageMe(damage)
 			all_dead = false	
+	
+	if all_dead:
+		SceneManager.switch_scene("res://win_screen.tscn")
 		
 
 func _on_timer_timeout() -> void:
