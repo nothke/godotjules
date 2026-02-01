@@ -25,12 +25,12 @@ func _on_character_fast_pressed() -> void:
 	play_level()
 
 func _on_character_smart_pressed() -> void:
-	Global.add_fighter($hbox/CharacterSmart.player_stats, $hbox/CharacterSmart.texture,$hbox/CharacterFast.texture)
+	Global.add_fighter($hbox/CharacterSmart.player_stats, $hbox/CharacterSmart.texture,$hbox/CharacterSmart.texture)
 	play_level()
 
 
 func _on_character_strong_pressed() -> void:
-	Global.add_fighter($hbox/CharacterStrong.player_stats, $hbox/CharacterStrong.texture,$hbox/CharacterFast.texture)
+	Global.add_fighter($hbox/CharacterStrong.player_stats, $hbox/CharacterStrong.texture,$hbox/CharacterStrong.texture)
 	play_level()
 
 
